@@ -85,7 +85,7 @@ userInfoPrompt().then(function(answer){
     license = answer.inputLicense;
     contributing = answer.inputContributing;
     test = answer.inputTest;
-    question = answer.inputQuestin;
+    question = answer.inputQuestion;
 
     if(license ==="MIT"){
         badge1 = "https://img.shields.io/badge/license-MIT-purple"
