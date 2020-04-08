@@ -1,6 +1,7 @@
 const inquire = require("inquirer");
 const fs = require("fs");
 const axios = require("axios");
+const MarkDownit = require("markdown-it");
 
 
 
@@ -54,9 +55,10 @@ userInfoPrompt().then(function(answer){
       
       
       `
-
+    md = new MarkDownit();
+    var newMD = md.render(markDown);
       
-      fs.writeFile("README.md", markDown, function(error){
+    fs.writeFile("README.md", newMD, function(error){
             if (error) throw error;
             console.log('The file has been saved!');      });
 });
