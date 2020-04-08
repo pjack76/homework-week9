@@ -1,9 +1,9 @@
 
 
-![avatar image] (https://avatars2.githubusercontent.com/u/60330956?v=4)
+![avatar] (https://avatars2.githubusercontent.com/u/60330956?v=4)
 
-# new
-![badges] (https://img.shields.io/badge/license-GNU GPLv3-blue https://img.shields.io/badge/test-NPM-red)
+# New Mega Project
+![badges] (https://img.shields.io/badge/license-MIT-purple https://img.shields.io/badge/test-Jest-red https://img.shields.io/badge/contributing-4-black)
 
 ### Table of Content
 * [Description]
@@ -15,22 +15,22 @@
 * [Questions]
 
 ### Description
-new
+blah blah blah...
 
 ### Usage
-ok
+blah blah...
     
 ### Installation
-ok
+npm install
     
 ### License
-GNU GPLv3
+MIT
 
 ### Contributing
-joss
+4
     
 ### Test
-NPM
+Jest
 
 ### Questions
 later

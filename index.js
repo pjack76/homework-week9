@@ -46,13 +46,14 @@ const questions = [{
 {
     type: "input",
     name: "inputContributing",
-    message: "Please enter the names of people contributing to the project."
+    message: "Please enter the number of people will be contributing to the project."
 },
 
 {
-    type: "input",
+    type: "list",
     name: "inputTest",
-    message: "Please enter the description of how to test your project."
+    message: "Please select the testing framework you plan to use for your project.",
+    choices: ["Jest", "Mocha", "Nightwatch"]
 },
 
 {
@@ -67,15 +68,8 @@ function userInfoPrompt() {
     return inquire.prompt(questions)
 };
 
-var username;
-var title;
-var description;
-var usage;
-var license;
-var contributing;
-var test;
-var question;
-var badge1, badge2;
+var username, title, description, usage, license, contributing, test, question;
+var badge1, badge2, badge3;
 
 userInfoPrompt().then(function(answer){
     username = answer.userInput;
@@ -91,14 +85,20 @@ userInfoPrompt().then(function(answer){
     if(license ==="MIT"){
         badge1 = "https://img.shields.io/badge/license-MIT-purple"
     } else if (license === "GNU GPLv3"){
-        badge1 = "https://img.shields.io/badge/license-GNU GPLv3-blue"
+        badge1 = "https://img.shields.io/badge/license-GNUGPLv3-blue"
     } else if (license === "Apache"){
         badge1 = "https://img.shields.io/badge/license-Apache-green"
     } else {badge1 = ""};
 
-    if(test ==="NPM"){
-        badge2 = "https://img.shields.io/badge/test-NPM-red"
+    if(test ==="Jest"){
+        badge2 = "https://img.shields.io/badge/test-Jest-red"
+    } else if(test ==="Mocha"){
+        badge2 = "https://img.shields.io/badge/test-Mocha-brown"
+    } else if(test ==="Nightwatch"){
+        badge2 = "https://img.shields.io/badge/test-Nightwatch-black"
     } else {badge2 = ""};
+
+    badge3 = `https://img.shields.io/badge/contributing-${contributing}-black`
 
 
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=25`;
@@ -109,10 +109,10 @@ userInfoPrompt().then(function(answer){
 
     let markDown = `
 
-![avatar image] (${repoOwner.avatar_url})
+![avatar] (${repoOwner.avatar_url})
 
 # ${title}
-![badges] (${badge1} ${badge2})
+![badges] (${badge1} ${badge2} ${badge3})
 
 ### Table of Content
 * [Description]
