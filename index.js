@@ -74,6 +74,7 @@ var license;
 var contributing;
 var test;
 var question;
+var badge1, badge2;
 
 userInfoPrompt().then(function(answer){
     username = answer.userInput;
@@ -82,8 +83,18 @@ userInfoPrompt().then(function(answer){
     usage = answer.inputUsage;
     installation = answer.inputInstallation;
     license = answer.inputLicense;
+    contributing = answer.inputContributing;
     test = answer.inputTest;
     question = answer.inputQuestin;
+
+    if(license ==="MIT"){
+        badge1 = "https://img.shields.io/badge/license-MIT-purple"
+    } else {badge1 = ""};
+
+    if(test ==="NPM"){
+        badge2 = "https://img.shields.io/badge/test-NPM-red"
+    } else {badge2 = ""};
+
 
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=25`;
 
@@ -93,45 +104,43 @@ userInfoPrompt().then(function(answer){
 
     let markDown = `
       
-    # ${title}
+# ${title}
+![badges](${badge1} ${badge2})
 
-    ### Table of Content
-        * [Description]
-        * [Usage]
-        * [Installation]
-        * [License]
-        * [Contributing]
-        * [Test]
-        * [Questions]
+### Table of Content
+* [Description]
+* [Usage]
+* [Installation]
+* [License]
+* [Contributing]
+* [Test]
+* [Questions]
 
-    ### Description
-       ${description}
+### Description
+${description}
 
-    ###Usage
-        ${usage}
+### Usage
+${usage}
     
-    ###Installation
-        ${installation}
+### Installation
+${installation}
     
-    ###License
-        ${license}
+### License
+${license}
 
-    ###Contributing
-        ${contributing}
+### Contributing
+${contributing}
     
-    ###Test
-        ${test}
+### Test
+${test}
 
-    ###Questions
-        ${question}
+### Questions
+${question}
 
-    <img src= ${repoOwner.avatar_url} alt="github avatar"/>
+<img src= ${repoOwner.avatar_url} alt="github avatar"/>
 
-    `
-    
-      
-      
-      
+`
+     
          
     fs.writeFile("Generated_README.md", markDown, function(error){
             if (error) throw error;
@@ -139,31 +148,3 @@ userInfoPrompt().then(function(answer){
 });
 });
 
-/*function generateMarkdown() {
-    return `
-  # ${title}
-
-  # ${description}
-  
-  `;
-  }
-
-
-
-
-
-
-
-
-function writeToFile(fileName, data) {
-    fs.writeFile("README.md", generateMarkdown());
-};
-
-writeToFile();
-
-function init() {
-
-}
-
-init();
-*/
