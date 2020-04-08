@@ -1,6 +1,6 @@
 
       
-    # new
+    # Mega Project
 
     ### Table of Content
         * [Description]
@@ -12,13 +12,13 @@
         * [Questions]
 
     ### Description
-       ok
+       great
 
     ###Usage
-        install
+        hit enter
     
     ###Installation
-        hit enter
+        use npm
     
     ###License
         mit
@@ -32,8 +32,6 @@
     ###Questions
         undefined
 
+    <img src= https://avatars2.githubusercontent.com/u/60330956?v=4 alt="github avatar"/>
 
-    Format: ![github avatar] (https://avatars2.githubusercontent.com/u/60330956?v=4)     
-      
-      
-      
+    

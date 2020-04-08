@@ -125,11 +125,13 @@ userInfoPrompt().then(function(answer){
     ###Questions
         ${question}
 
+    <img src= ${repoOwner.avatar_url} alt="github avatar"/>
 
-    Format: ![github avatar] (${repoOwner.avatar_url})     
+    `
+    
       
       
-      `
+      
          
     fs.writeFile("Generated_README.md", markDown, function(error){
             if (error) throw error;
