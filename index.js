@@ -15,7 +15,7 @@ const questions = [{
 {
     type: "input",
     name: "inputTitle",
-    message: "What is the title of your project?."
+    message: "What is the title of your project?"
 },
 
 {
@@ -37,9 +37,10 @@ const questions = [{
 },
 
 {
-    type: "input",
+    type: "list",
     name: "inputLicense",
-    message: "Please select the license for your project."
+    message: "Please select the license for your project.",
+    choices: ["MIT", "GNU GPLv3", "Apache", "Unlicense"]
 },
 
 {
@@ -89,6 +90,10 @@ userInfoPrompt().then(function(answer){
 
     if(license ==="MIT"){
         badge1 = "https://img.shields.io/badge/license-MIT-purple"
+    } else if (license === "GNU GPLv3"){
+        badge1 = "https://img.shields.io/badge/license-GNU GPLv3-blue"
+    } else if (license === "Apache"){
+        badge1 = "https://img.shields.io/badge/license-Apache-green"
     } else {badge1 = ""};
 
     if(test ==="NPM"){

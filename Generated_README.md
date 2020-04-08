@@ -3,7 +3,7 @@
 ![avatar image] (https://avatars2.githubusercontent.com/u/60330956?v=4)
 
 # new
-![badges] (https://img.shields.io/badge/license-MIT-purple https://img.shields.io/badge/test-NPM-red)
+![badges] (https://img.shields.io/badge/license-GNU GPLv3-blue https://img.shields.io/badge/test-NPM-red)
 
 ### Table of Content
 * [Description]
@@ -15,23 +15,23 @@
 * [Questions]
 
 ### Description
-my project is...
+new
 
 ### Usage
-it is used for...
+ok
     
 ### Installation
-hit enter a few times
+ok
     
 ### License
-MIT
+GNU GPLv3
 
 ### Contributing
-jack and jill
+joss
     
 ### Test
 NPM
 
 ### Questions
-maybe later
+later
 
