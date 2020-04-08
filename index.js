@@ -103,9 +103,11 @@ userInfoPrompt().then(function(answer){
     console.log(repoOwner.avatar_url);
 
     let markDown = `
-      
+
+![avatar image] (${repoOwner.avatar_url})
+
 # ${title}
-![badges](${badge1} ${badge2})
+![badges] (${badge1} ${badge2})
 
 ### Table of Content
 * [Description]
@@ -136,8 +138,6 @@ ${test}
 
 ### Questions
 ${question}
-
-<img src= ${repoOwner.avatar_url} alt="github avatar"/>
 
 `
      
